@@ -13,5 +13,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: url('../images/bg-intro-desktop.png') $Red;
+    display: flex;
+    flex-direction: column;
+    height: auto;
   }
   
