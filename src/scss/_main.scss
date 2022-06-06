@@ -1,0 +1,102 @@
+.main-container{
+    width:40%;
+    
+    .btn{
+        border: none;
+        padding: 1.3em;
+        color: #FFF;
+        background-color: $Blue;
+        border-radius: 8px;
+        box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.262);
+        margin-bottom: 2em;
+        width: 100%;
+        font-size:1em;
+        .tryIt4Free{
+            font-weight: 700;
+        }
+    }
+    .form-container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #FFF;
+        padding: 2em;
+        border-radius: 8px;
+
+        .success {
+            color: $Green;
+        }
+        
+        .input-container{
+            height: 4.5em;
+            
+            .input{
+                width: 100%;
+                font-size: 0.9em;
+                &:focus{
+                    border: 2px solid $DarkBlue;
+                }
+            }
+
+            .ativeError {
+                border: 2px solid $Red;
+            }
+
+            .inativeError {
+                border: 2px solid $GrayishBlue;
+            }
+
+            .error {
+                text-align: right;
+                color: $Red;
+                font-size: 0.9em;
+                font-style: italic;
+                margin-right: 8px;
+            }
+        }
+
+        .input, .btn-submit{
+            outline: none;
+            border-radius: 8px;
+            padding: 1.3em;
+            font-weight: 600;
+        }
+        
+        .btn-submit{
+            border:none;
+            color: #FFF;
+            background-color: $Green;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.262);
+            &:hover{
+                cursor: pointer;
+                opacity: 0.5;
+            }
+        }
+        .form-footer {
+           
+            padding: 0em 1em;
+            font-size: 0.7em;
+            .agree{
+                color: $GrayishBlue;
+                text-align: center;
+                .link-termsService{
+                    color: $Red;
+                    font-weight: 600;
+                    text-decoration: none;
+                }
+            }
+       
+        }
+    }
+}
+
+@media only screen and (max-width: 1191px) {
+    .main-container{
+        width: 100%;
+        .form-container{
+            padding: 1em ;
+        }
+    }
+}

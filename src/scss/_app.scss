@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import './colors';
+@import './header';
+@import './main';
+
+.app-container{
+   
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0em 10em;
+    gap: 20px;
+}
+
+@media only screen and (max-width: 1191px) {
+    .app-container{
+        margin:5em;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0em 2em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .app-container{
+        margin:5em 1em;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0em 2em;
+    }
+}
