@@ -2,6 +2,7 @@ const Input = ({handleData, error, placeholder, name}) => {
     
     let nameValue;
     let errorMsg;
+    let textInput='text';
     switch(placeholder){    
         case "First Name":
             nameValue='firstName';
@@ -18,6 +19,7 @@ const Input = ({handleData, error, placeholder, name}) => {
         case "Password":
             nameValue='password';
             errorMsg='Password cannot be empty';
+            textInput='password';
             break;
         default:
             break;
@@ -28,7 +30,7 @@ const Input = ({handleData, error, placeholder, name}) => {
             <input 
                 onChange={handleData}
                 value={name || ''} 
-                type="text"
+                type={textInput}
                 name={nameValue} 
                 className={`input ${error ? 'ativeError' : 'inativeError'}`} 
                 placeholder={placeholder}
