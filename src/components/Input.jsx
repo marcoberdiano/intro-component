@@ -1,32 +1,40 @@
 const Input = ({handleData, error, placeholder, name}) => {
     
     let nameValue;
+    let errorMsg;
     switch(placeholder){    
         case "First Name":
             nameValue='firstName';
+            errorMsg='First Name cannot be empty';
             break;
         case "Last Name":
             nameValue='lastName';
+            errorMsg='Last Name cannot be empty';
             break;
         case "Email Address":
             nameValue='email';
+            errorMsg='Looks like this is not an email';
             break;
         case "Password":
             nameValue='password';
+            errorMsg='Password cannot be empty';
             break;
         default:
             break;
-        }
+    }
 
-    return ( 
-        <input 
-            onChange={handleData}
-            value={name || ''} 
-            type="text"
-            name={nameValue} 
-            className={`input ${error ? 'ativeError' : 'inativeError'}`} 
-            placeholder={placeholder}
-        />
+    return (
+        <div className="input-container">
+            <input 
+                onChange={handleData}
+                value={name || ''} 
+                type="text"
+                name={nameValue} 
+                className={`input ${error ? 'ativeError' : 'inativeError'}`} 
+                placeholder={placeholder}
+            />
+            {error && <p className="error">{errorMsg}</p>}
+        </div>
      );
 }
  

@@ -74,46 +74,41 @@ const Main = () => {
     }
 
     return ( 
-        <div className="main-container">
+        <main className="main-container">
             <button className="btn">
                 <span className="tryIt4Free">Try it free 7 days</span> then $20/mo. thereafter
             </button>
             <form className="form-container" onSubmit={handlesubmit}>
 
             { submit && <p className="success">Success! We received your submission!</p>}
+      
+            <Input 
+                name={data.firstName}
+                placeholder="First Name" 
+                error={errorFirstName} 
+                handleData={handleData}
+             />
+             
+            <Input 
+                name={data.lastName}
+                placeholder="Last Name" 
+                error={errorLastName} 
+                handleData={handleData}
+             />
+            <Input 
+                name={data.email}
+                placeholder="Email Address" 
+                error={errorEmail} 
+                handleData={handleData}
+             />
 
-            <div className="input-container">
-                <Input name={data.firstName}
-                 placeholder="First Name" 
-                 error={errorFirstName} 
-                 handleData={handleData}
-                 />
-                {errorFirstName && <p className="error">First Name cannot be empty</p>}
-            </div>
-
-            <div className="input-container">
-                <Input name={data.lastName}
-                 placeholder="Last Name" 
-                 error={errorLastName} 
-                 handleData={handleData}/>
-                 {errorLastName && <p className="error">Last Name cannot be empty</p>}
-            </div>
-
-            <div className="input-container">
-                <Input name={data.email}
-                 placeholder="Email Address" 
-                 error={errorEmail} 
-                 handleData={handleData}/>
-                  {errorEmail && <p className="error">Looks like this is not an email</p>}
-            </div>
-
-            <div className="input-container">
-                <Input name={data.password}
-                 placeholder="Password" 
-                 error={errorPassword} 
-                 handleData={handleData}/>
-                 {errorPassword && <p className="error">Password cannot be empty</p>}
-            </div>
+            <Input 
+                name={data.password}
+                placeholder="Password" 
+                error={errorPassword} 
+                handleData={handleData}
+             />
+                
                 
             <button type="submit" className="btn-submit">Claim your free trial</button>
 
@@ -127,7 +122,7 @@ const Main = () => {
             </div>
                 
             </form>
-        </div>
+        </main>
      );
 }
  
