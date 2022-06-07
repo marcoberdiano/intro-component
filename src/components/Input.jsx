@@ -1,3 +1,5 @@
+import {ReactComponent as IconError} from '../images/icon-error.svg';
+
 const Input = ({handleData, error, placeholder, name}) => {
     
     let nameValue;
@@ -26,15 +28,20 @@ const Input = ({handleData, error, placeholder, name}) => {
     }
 
     return (
-        <div className="input-container">
-            <input 
-                onChange={handleData}
-                value={name || ''} 
-                type={textInput}
-                name={nameValue} 
-                className={`input ${error ? 'ativeError' : 'inativeError'}`} 
-                placeholder={placeholder}
-            />
+        <div className='input-error-container'>
+            <div className="input-container">
+                <div className='input-flex'>
+                    <input 
+                        onChange={handleData}
+                        value={name || ''} 
+                        type={textInput}
+                        name={nameValue} 
+                        className={`input ${error ? 'ativeError' : 'inativeError'}`} 
+                        placeholder={placeholder}
+                    />
+                    {error && <IconError className='iconError' />}
+                </div>      
+            </div>
             {error && <p className="error">{errorMsg}</p>}
         </div>
      );

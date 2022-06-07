@@ -54,34 +54,37 @@
 .main-container .form-container .success {
   color: hsl(154deg, 59%, 51%);
 }
-.main-container .form-container .input-container {
+.main-container .form-container .input-error-container {
   height: 4.5em;
 }
-.main-container .form-container .input-container .input {
+.main-container .form-container .input-error-container .input-container .input-flex {
+  display: flex;
+  align-items: center;
+}
+.main-container .form-container .input-error-container .input-container .input-flex .input {
   width: 100%;
   font-size: 0.9em;
 }
-.main-container .form-container .input-container .input:focus {
+.main-container .form-container .input-error-container .input-container .input-flex .input:focus {
   border: 2px solid hsl(249deg, 10%, 26%);
 }
-.main-container .form-container .input-container .ativeError {
+.main-container .form-container .input-error-container .input-container .input-flex .ativeError {
   border: 2px solid hsl(0deg, 100%, 74%);
 }
-.main-container .form-container .input-container .inativeError {
+.main-container .form-container .input-error-container .input-container .input-flex .inativeError {
   border: 2px solid hsl(246deg, 25%, 77%);
 }
-.main-container .form-container .input-container .iconError {
-  position: relative;
-  top: 0;
+.main-container .form-container .input-error-container .input-container .input-flex .iconError {
+  margin-left: -35px;
 }
-.main-container .form-container .input-container .error {
+.main-container .form-container .input-error-container .error {
   text-align: right;
   color: hsl(0deg, 100%, 74%);
   font-size: 0.9em;
   font-style: italic;
   margin-right: 8px;
 }
-.main-container .form-container .input, .main-container .form-container .btn-submit {
+.main-container .form-container .input-error-container .input {
   outline: none;
   border-radius: 8px;
   padding: 1.3em;
@@ -94,6 +97,10 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.262);
+  outline: none;
+  border-radius: 8px;
+  padding: 1.3em;
+  font-weight: 600;
 }
 .main-container .form-container .btn-submit:hover {
   cursor: pointer;
@@ -156,6 +163,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: url("../images/bg-intro-desktop.png") hsl(0deg, 100%, 74%);
+  display: flex;
+  flex-direction: column;
+  height: auto;
 }
 
 /*# sourceMappingURL=index.css.map */

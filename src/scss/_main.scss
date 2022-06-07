@@ -16,6 +16,7 @@
         }
     }
     .form-container{
+        
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -26,41 +27,54 @@
         .success {
             color: $Green;
         }
-        
-        .input-container{
+
+        .input-error-container{
             height: 4.5em;
-            border: 1px solid blue;
-            .input{
-                width: 100%;
-                font-size: 0.9em;
-                &:focus{
-                    border: 2px solid $DarkBlue;
+        .input-container{
+           
+            .input-flex{
+                display: flex;
+                align-items: center;
+                
+                .input{
+                    width: 100%;
+                    font-size: 0.9em;
+                    &:focus{
+                        border: 2px solid $DarkBlue;
+                    }
                 }
-            }
+    
+                .ativeError {
+                    border: 2px solid $Red;
+                }
+    
+                .inativeError {
+                    border: 2px solid $GrayishBlue;
+                }
 
-            .ativeError {
-                border: 2px solid $Red;
-            }
-
-            .inativeError {
-                border: 2px solid $GrayishBlue;
-            }
-
-            .error {
-                text-align: right;
-                color: $Red;
-                font-size: 0.9em;
-                font-style: italic;
-                margin-right: 8px;
-            }
+                .iconError{
+                    margin-left: -35px;
+                }
+            }   
         }
 
-        .input, .btn-submit{
+        .error {
+            text-align: right;
+            color: $Red;
+            font-size: 0.9em;
+            font-style: italic;
+            margin-right: 8px;
+           
+        }
+
+        .input{
             outline: none;
             border-radius: 8px;
             padding: 1.3em;
             font-weight: 600;
         }
+
+    }
         
         .btn-submit{
             border:none;
@@ -69,6 +83,10 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.262);
+            outline: none;
+            border-radius: 8px;
+            padding: 1.3em;
+            font-weight: 600;
             &:hover{
                 cursor: pointer;
                 opacity: 0.5;
